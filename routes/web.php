@@ -4,9 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
 Route::get('/', [TestController::class, 'index']);
-Route::post('/thanks', [TestController::class, 'thanks']);
+Route::post('/', [TestController::class, 'post']);
 
-
+Route::get('/thanks', function () {
+    return view('thanks');
+});
 
 
 

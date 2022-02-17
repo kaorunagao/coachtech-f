@@ -7,15 +7,15 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $items = Test::all();
-        return view('index', ['items' => $items]);
+        return view('/index');
     }
-
-    public function thanks()
+    public function post(Request $request)
     {
-        return view('thanks');
+        $form = $request->all();
+        unset($form['_token_']);
+        Test::create($form);
+        return view('/thanks');
     }
-    
 }

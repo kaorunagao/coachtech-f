@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <form method="POST" action="thanks">
+  <form action="/" method="post">
     @csrf
-    名前<br>
-      <input type="text" name="name"><br>
-    メールアドレス<br>
-      <input type="email" name="email"><br>
+    <label>氏名<label><br>
+    <input type="text" name="name"><br>
+    <label>メールアドレス<label><br>
+    <input type="email" name="email"><br>
     <input type="submit" value="送信する">
   </form>
 

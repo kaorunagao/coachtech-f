@@ -7,9 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Test extends Model
 {
-    public function getDetail()
-    {
-        $txt = 'ID:'.$this->id . ' ' . $this->name . ' '.$this->email;
-        return $txt;
-    }
+    use HasFactory;
+    protected $guarded = array('id');
 }

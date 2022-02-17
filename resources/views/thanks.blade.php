@@ -10,7 +10,7 @@
 
 <body>
   <p>お問い合わせありがとうございます。</p>
-<button type="button" onClick = "history.back()">トップへ戻る</button>
+  <a href="/">トップへ戻る</a>
 </body>
 
 </html>
